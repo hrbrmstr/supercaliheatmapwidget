@@ -1,4 +1,4 @@
-#' Construct a margin object for calendar heatmap parameters
+#' Construct a label object for calendar heatmap parameters
 #'
 #' @param position position of the label, relative to the `domain` one of
 #'        `top`, `left`, `bottom` or `right` (or abbreviated versions). Default
@@ -11,7 +11,7 @@
 #'        does not fit your need (likley when rotation is involved) or when
 #'        using a larger font size. Use [cal_offset()] to construct. Defualt
 #'        is `cal_offset(0,0)`.
-#' @param width _only used when `roate` is not `none`! This defines the width
+#' @param width _only_ used when `roate` is not `none`! This defines the width
 #'        of the label (in pixels).
 #' @param height height of the `domain` labels in pixels. If `NULL` the label
 #'        is automagically set to 2x the height of `sub_domain` cells.

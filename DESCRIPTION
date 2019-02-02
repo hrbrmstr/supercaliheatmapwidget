@@ -5,10 +5,12 @@ Version: 0.1.0
 Date: 2019-02-01
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
-           comment = c(ORCID = "0000-0001-5670-2640"))
+           comment = c(ORCID = "0000-0001-5670-2640")),
+    person("Wan", "Qi Chen", role = c("aut"),
+           comment = "cal-heatmap.js developer. <https://github.com/wa0x6e/cal-heatmap>")
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: Supercalifragilistic HTML Calendar Heatmaps.
+Description: The veritable Mary Poppins of interactive R calendar heatmaps.
 URL: https://gitlab.com/hrbrmstr/supercaliheatmapwidget
 BugReports: https://gitlab.com/hrbrmstr/supercaliheatmapwidget/issues
 Encoding: UTF-8

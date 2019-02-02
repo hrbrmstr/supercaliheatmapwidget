@@ -2,7 +2,7 @@
 % Please edit documentation in R/cal-label.R
 \name{cal_label}
 \alias{cal_label}
-\title{Construct a margin object for calendar heatmap parameters}
+\title{Construct a label object for calendar heatmap parameters}
 \usage{
 cal_label(position = c("bottom", "top", "left", "right"),
   align = c("center", "left", "right"), rotate = c("none", "left",
@@ -24,12 +24,12 @@ does not fit your need (likley when rotation is involved) or when
 using a larger font size. Use \code{\link[=cal_offset]{cal_offset()}} to construct. Defualt
 is \code{cal_offset(0,0)}.}
 
-\item{width}{_only used when \code{roate} is not \code{none}! This defines the width
+\item{width}{\emph{only} used when \code{roate} is not \code{none}! This defines the width
 of the label (in pixels).}
 
 \item{height}{height of the \code{domain} labels in pixels. If \code{NULL} the label
 is automagically set to 2x the height of \code{sub_domain} cells.}
 }
 \description{
-Construct a margin object for calendar heatmap parameters
+Construct a label object for calendar heatmap parameters
 }
