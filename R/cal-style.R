@@ -46,10 +46,10 @@ cal_style <- function(cwdgt,
   if (!missing(graph_rect)) cwdgt <- .set_style(cwdgt, ".graph-rect", graph_rect)
   if (!missing(highlight)) cwdgt <- .set_style(cwdgt, ".highlight", highlight)
   if (!missing(highlight_now)) cwdgt <- .set_style(cwdgt, ".highlight.now", highlight_now)
-  if (!missing(rect_highlight)) cwdgt <- .set_style(cwdgt, ".rect.highlight", rect_highlight)
-  if (!missing(rect_highlight_now)) cwdgt <- .set_style(cwdgt, ".rect.now", rect_highlight_now)
-  if (!missing(text_highlight)) cwdgt <- .set_style(cwdgt, ".text.highlight", text_highlight)
-  if (!missing(text_highlight_now)) cwdgt <- .set_style(cwdgt, ".text.now", text_highlight_now)
+  if (!missing(rect_highlight)) cwdgt <- .set_style(cwdgt, "rect.highlight", rect_highlight)
+  if (!missing(rect_highlight_now)) cwdgt <- .set_style(cwdgt, "rect.now", rect_highlight_now)
+  if (!missing(text_highlight)) cwdgt <- .set_style(cwdgt, "text.highlight", text_highlight)
+  if (!missing(text_highlight_now)) cwdgt <- .set_style(cwdgt, "text.now", text_highlight_now)
 
   cwdgt
 

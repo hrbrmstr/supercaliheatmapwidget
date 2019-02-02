@@ -31,8 +31,6 @@ cal_legend <- function(cwdgt, show = TRUE, breaks = 5, colors = NULL, cell_size 
   cwdgt$x$legendHorizontalPosition <- hjust
   cwdgt$x$legendOrientation <- orientation
 
-  print(str(cwdgt$x$legend))
-
   return(cwdgt)
 
 }

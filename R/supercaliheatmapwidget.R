@@ -37,17 +37,17 @@
 #' @param row_limit control the number of rows to split the `domain` into. Default is `NULL`.`
 #' @param width,height,elementId the usual `htmlwidget` suspsects.
 #' @export
-supercaliheatmapwidget <- function(xdf, datetime_col, value_col,
-                                   tooltip = TRUE, tooltip_item_name = cal_names(),
-                                   domain = c("month", "day", "hour", "week", "year"),
-                                   sub_domain = c("day", "min", "x_min", "hour", "x_hour", "x_day", "week", "x_week", "month", "x_month"),
-                                   range = 12, start = NULL,
-                                   cell_size = 20, cell_padding = 4, cell_radius = 0,
-                                   domain_gutter = 6, domain_margin = cal_margin(),
-                                   orientation = c("horizontal", "vertical"),
-                                   label = cal_label(),
-                                   col_limit = NULL, row_limit = NULL,
-                                   width = NULL, height = NULL, elementId = NULL) {
+supercal <- function(xdf, datetime_col, value_col,
+                     tooltip = TRUE, tooltip_item_name = cal_names(),
+                     domain = c("month", "day", "hour", "week", "year"),
+                     sub_domain = c("day", "min", "x_min", "hour", "x_hour", "x_day", "week", "x_week", "month", "x_month"),
+                     range = 12, start = NULL,
+                     cell_size = 20, cell_padding = 4, cell_radius = 0,
+                     domain_gutter = 6, domain_margin = cal_margin(),
+                     orientation = c("horizontal", "vertical"),
+                     label = cal_label(),
+                     col_limit = NULL, row_limit = NULL,
+                     width = NULL, height = NULL, elementId = NULL) {
 
   domain <- match.arg(domain, c("month", "day", "hour", "week", "year"))
   sub_domain <- match.arg(sub_domain, c("day", "min", "x_min", "hour", "x_hour", "x_day", "week", "x_week", "month", "x_month"))
@@ -75,7 +75,14 @@ supercaliheatmapwidget <- function(xdf, datetime_col, value_col,
     value_col <- as.character(substitute(value_col))
   }
 
+
   d <- xdf[[datetime_col]]
+  v <- xdf[[value_col]]
+
+  gd <- which(!is.na(v))
+  v <- v[gd]
+  d <- d[gd]
+
   if (inherits(d, "POSIXct")) {
     d <- as.numeric(d)
   } else if (inherits(d, "Date")) {
@@ -86,7 +93,6 @@ supercaliheatmapwidget <- function(xdf, datetime_col, value_col,
     stop("Unknown 'datetimecol' format.", call. = FALSE)
   }
 
-  v <- xdf[[value_col]]
 
   stopifnot(is.numeric(v))
 

@@ -6,16 +6,16 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
 
-    // TODO: define shared variables for this instance
+    var fmt, cal;
 
     return {
 
       renderValue: function(x) {
 
-        console.log(x);
+        // console.log(x);
 
-        var fmt = d3.time.format("%Y-%m-%d");
-        var cal = new CalHeatMap();
+        fmt = d3.time.format("%Y-%m-%d");
+        cal = new CalHeatMap();
 
         cal.init({
           itemSelector: el,
@@ -44,11 +44,7 @@ HTMLWidgets.widget({
 
       },
 
-      resize: function(width, height) {
-
-        // TODO: code to re-render the widget with a new size
-
-      }
+      resize: function(width, height) { }
 
     };
   }
