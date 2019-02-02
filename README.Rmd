@@ -14,7 +14,11 @@ options(width=120)
 
 # supercaliheatmapwidget
 
+Supercalifragilistic HTML Calendar Heatmaps
+
 ## Description
+
+The veritable Mary Poppins of interactive R calendar heatmaps.
 
 ## What's Inside The Tin
 
