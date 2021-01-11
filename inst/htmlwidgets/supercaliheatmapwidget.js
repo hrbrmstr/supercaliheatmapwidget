@@ -12,6 +12,9 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
+        while (document.getElementById(el.id).hasChildNodes()) {
+            document.getElementById(el.id).removeChild(document.getElementById(el.id).lastChild);
+        }
         // console.log(x);
 
         fmt = d3.time.format("%Y-%m-%d");
