@@ -3341,7 +3341,7 @@ Legend.prototype.buildColors = function() {
 
 	var colorScale = d3.scale.linear()
 		.range(_colorRange)
-		.interpolate(d3.interpolateHcl)
+		.interpolate(d3.interpolateHsl)
 		.domain([d3.min(_legend), d3.max(_legend)])
 	;
 
