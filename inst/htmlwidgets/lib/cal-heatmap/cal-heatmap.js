@@ -3339,7 +3339,7 @@ Legend.prototype.buildColors = function() {
 		_legend.unshift(_legend[0] - (_legend[_legend.length-1] - _legend[0])/_legend.length);
 	}
 
-	var colorScale = d3.scale.linear()
+	var colorScale = d3.scale.sqrt()
 		.range(_colorRange)
 		.interpolate(d3.interpolateHsl)
 		.domain([d3.min(_legend), d3.max(_legend)])
